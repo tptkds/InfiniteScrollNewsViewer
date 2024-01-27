@@ -6,5 +6,3 @@ import { newsScrollObserver } from "./observers.js";
 Nav();
 newsListContainer();
 newsScrollObserver();
-
-
