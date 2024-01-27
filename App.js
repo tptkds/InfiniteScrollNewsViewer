@@ -1,7 +1,10 @@
 // do something!
-const root = document.querySelector('#root');
 import { Nav } from "./components/Nav.js";
-import { NewsList } from "./components/NewsList.js";
+import { newsListContainer } from "./components/NewsListContainer.js";
+import { newsScrollObserver } from "./observers.js";
 
-root.appendChild(Nav());
-root.appendChild(NewsList());
+Nav();
+newsListContainer();
+newsScrollObserver();
+
+

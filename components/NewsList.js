@@ -1,13 +1,12 @@
 import { getNewsItems } from "../modules/getNewsItems.js";
-import { appendChildren } from "../utils/dom.js";
 
 // do something!
-export const NewsList = () => {
-    const newsListContainer = document.createElement('div');
-    newsListContainer.classList = 'news-list-container';
+export const NewsList = async () => {
     const newsList = document.createElement('article');
     newsList.className = "news-list";
-    appendChildren(newsList,getNewsItems());
-    newsListContainer.appendChild(newsList);
-    return newsListContainer;
+    document.querySelector('.news-list-container').appendChild(newsList);
+    getNewsItems();
 }
+
+
+

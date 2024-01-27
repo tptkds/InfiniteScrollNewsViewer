@@ -70,7 +70,11 @@ body {
   line-height: 1.5;
   white-space: normal;
 }
-.scroll-observer {
+.scroll-ver {
   text-align: center;
   margin: 10px;
+}
+
+#scrollTarget {
+  height: 1px;
 }
