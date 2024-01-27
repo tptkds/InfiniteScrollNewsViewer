@@ -1,11 +1,9 @@
-import { getNewsItems } from "./modules/getNewsItems.js";
 import { store } from './store.js';
 
 const callback = (entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             store.page = store.page + 1;
-            getNewsItems(store.category, store.page);
         }
     })
     

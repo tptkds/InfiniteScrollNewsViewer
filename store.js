@@ -1,12 +1,15 @@
+import { getNewsItems } from './modules/getNewsItems.js';
+
 const statesChangeHandler = {
-    set(target, prop, value, receiver) {
+    set(target, prop, value) {
         target[prop] = value;
         if (prop == 'category') {
-            store.page = 1;
+            target['page'] = 1;
         }    
+        getNewsItems();
         return true;
     },
-    get(target, prop, receiver) {
+    get(target, prop) {
         return target[prop];
     }
 };

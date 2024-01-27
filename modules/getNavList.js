@@ -1,7 +1,6 @@
 import { categories } from "../assets/constants/categories.js";
 import { store } from "../store.js";
 import { setElementProperties } from "../utils/dom.js";
-import { getNewsItems } from "./getNewsItems.js";
 const engCategories = ['all','business', 'entertainment',
     'health', 'science', 'sports', 'technology'];
 export const getNavList = () => {
@@ -12,9 +11,8 @@ export const getNavList = () => {
         li.addEventListener('click', () => { 
             document.querySelector('.active').classList.remove('active');
             li.classList.add('active');
-            store.category = engCategories[idx];
             document.querySelector('.news-list').innerHTML = "";
-            getNewsItems();
+            store.category = engCategories[idx];
         })
         ul.appendChild(li);
     })
